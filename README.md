@@ -1,6 +1,6 @@
 # esx_policejob_updated
 
--- This repository is my modification of the esx_policejob resource with many future improvements and optimizatios
+-- This repository is my modification of the esx_policejob resource with many improvements and optimizations coming in future
 
 -- This resource for ESX adds police armories, vehicle garages and ability for cops to search, handcuff people and much more.
 
