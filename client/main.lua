@@ -1122,7 +1122,13 @@ AddEventHandler('esx_policejob:putInVehicle', function()
 				end
 
 				if freeSeat then
-					TaskWarpPedIntoVehicle(playerPed, vehicle, freeSeat)
+					SetVehicleDoorOpen(vehicle, freeSeat + 1, false, false)
+        			FreezeEntityPosition(playerPed, false)
+        			TaskEnterVehicle(playerPed, vehicle, 0, freeSeat, 1.0, 1, 0)
+					while not IsPedInVehicle(playerPed, vehicle, false) do
+					  Citizen.Wait(300)
+					end
+					FreezeEntityPosition(playerPed, true)
 					dragStatus.isDragged = false
 				end
 			end
